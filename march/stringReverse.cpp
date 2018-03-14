@@ -22,7 +22,7 @@ void stringReverse(char *str, int start, int end)
 
 int main()
 {
-  char name[] = "kanishk debnath is my favourite teacher.";
+  char name[] = "Stephen Hawkings is my favourite teacher.";
   int length = sizeof(name) - 1;
 
   cout << length << endl;
