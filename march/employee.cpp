@@ -22,6 +22,15 @@ public:
   void show_details();
 };
 
+void promotedemployee(Employee *);
+
+int main()
+{
+
+
+  return 0;
+}
+
 void Employee::get_details()
 {
   cout << "Enter employee number : "; cin >> eno;
@@ -42,10 +51,17 @@ void Employee::show_details()
   cout << "---------------------------------------------------------------" << endl;
 }
 
-
-int main()
+void promotedemployee(Employee *employee)
 {
-
-
-  return 0;
+  //loop through all employees
+  for(int i = 0; i < size; i++)
+  {
+    //if salary < 100000 and work hours > 7
+    if(employee[i].salary < 100000 && employee[i].workingHours > 7)
+    {
+      //update salary = salary * 1.1
+      employee[i].updateSalary();
+      //display details
+    }
+  }
 }
