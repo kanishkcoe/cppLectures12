@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -18,6 +19,41 @@ private:
   Time workTime;
 
 public:
+  //default constructor
+  Employee()
+  {
+    eno = 0;
+    strcpy(name, "undefined");
+    salary = 0.0;
+    workTime.arrivalTime = 0;
+    workTime.departureTime = 0;
+  }
+
+  //parameterized constructor
+  Employee(int num, char * naam, float sal, int arrival, int departure)
+  {
+    eno = num;
+    strcpy(name, naam);
+    salary = sal;
+    workTime.arrivalTime = arrival;
+    workTime.departureTime = departure;
+  }
+
+  //copy constructor
+  Employee(Employee &employee)
+  {
+    eno = employee.eno;
+    strcpy(name, employee.name);
+    salary = employee.salary;
+    workTime.arrivalTime = employee.workTime.arrivalTime;
+    workTime.departureTime = employee.workTime.departureTime;
+  }
+
+  ~Employee()
+  {
+    cout << "destructor for employee " << eno << " called." << endl;
+  }
+
   void get_details();
   void show_details();
 };

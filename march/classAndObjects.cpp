@@ -14,14 +14,14 @@ private:
 public:
   //constructors
   //default constructors
-  Complex()
-  {
-    real = 10;
-    imaginary = 40;
-  }
+  // Complex()
+  // {
+  //   real = 10;
+  //   imaginary = 40;
+  // }
 
   //parameterised constructors
-  Complex(int r, int i)
+  Complex(int r = -1, int i = -1)
   {
     real = r;
     imaginary = i;
