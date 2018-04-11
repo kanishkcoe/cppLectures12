@@ -3,45 +3,40 @@
 
 using namespace std;
 
-int area(int a)
+int area(int side)
 {
-  return a * a;
+  return side * side;
 }
 
-int area(int a, int b)
+int area(int length, int bredth)
 {
-  return a * b;
+  return length * bredth;
 }
 
-double area(double r)
+double area(double radius)
 {
-  return 3.14 * r * r;
+  return 3.14 * radius * radius;
 }
 
 double area(int a, int b, int c)
 {
-    double s = double((a + b + c) / 2);
-    double term = (s * (s - a) * (s - b) * (s - c));
-    return sqrt(term);
+  double s = (a + b + c) / 2;
+  return sqrt(s * (s - a) * (s - b) * (s - c));
 }
 
 int main()
 {
-  int a;
-  float b;
-  //area of a square
-  cin >> a;
-  cout << area(5) << endl;
+  //square's area
+  cout << area(41) << endl;
 
-  //area of rectangle
-  cout << area(10, 20) << endl;
+  //rectangle's area
+  cout << area(12, 5) << endl;
 
-  //area of circle
-  cin >> b;
-  cout << area(5.0) << endl;
+  //circle's area
+  cout << area(1) << endl;
 
-  //area of triangle
-  cout << area(30, 51, 40) << endl;
+  //triangle's area
+  cout << area(3, 4, 5) << endl;
 
   return 0;
 }

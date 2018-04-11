@@ -1,0 +1,7 @@
+K:\WORK\cppLectures12\april\area.cpp: In function 'double area(int)':
+K:\WORK\cppLectures12\april\area.cpp:16:23: error: ambiguating new declaration of 'double area(int)'
+ double area(int radius)
+                       ^
+K:\WORK\cppLectures12\april\area.cpp:6:5: note: old declaration 'int area(int)'
+ int area(int side)
+     ^
