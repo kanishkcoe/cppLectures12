@@ -27,13 +27,13 @@ double area(int a, int b, int c)
 int main()
 {
   //square's area
-  cout << area(41) << endl;
+  cout << area(1) << endl;
 
   //rectangle's area
   cout << area(12, 5) << endl;
 
   //circle's area
-  cout << area(1) << endl;
+  cout << area(1.0) << endl;
 
   //triangle's area
   cout << area(3, 4, 5) << endl;
