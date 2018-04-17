@@ -28,9 +28,9 @@ public:
 
 Distance::Distance()
 {
-    // km = 0;
-    // m = 0;
-    put_distance();
+    km = 0;
+    m = 0;
+    //put_distance();
 }
 
 Distance::Distance(int a, int b = 1000)
@@ -47,7 +47,7 @@ Distance::Distance(Distance &t)
 
 Distance::~Distance()
 {
-    get_distance();
+    //get_distance();
     cout << "Destructor called " << km << " == " << m << endl;
 }
 
@@ -69,20 +69,21 @@ void Distance::get_distance()
 int main()
 {
     Distance d1;
+    Distance d2;
     cout << "d2 : ";
-    // d2.get_distance();
+    d2.get_distance();
     d2 = Distance(450, 123);
     Distance d3(56, 78);
     Distance d4(d2);
-    Distance d5(340, 908);
+    Distance d5(340);
     Distance d6;
 
     // d.put_distance();
-    // d1.get_distance();
-    // d2.get_distance();
-    // d3.get_distance();
-    // d4.get_distance();
-    // d5.get_distance();
-    //d6.put_distance();
+    d1.get_distance();
+    d2.get_distance();
+    d3.get_distance();
+    d4.get_distance();
+    d5.get_distance();
+    d6.get_distance();
     return 0;
 }
