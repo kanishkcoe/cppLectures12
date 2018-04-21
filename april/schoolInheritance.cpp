@@ -8,6 +8,11 @@ protected:
   char name[20];
   int age;
   char address[50];
+
+public:
+  //home assignment
+  void get_common_data();
+  void show_common_data();
 };
 
 class Student : public School
