@@ -27,7 +27,7 @@ class Date
   int year;
 
   public:
-  Time()
+  Date()
   {
     day = 0;
     month = 0;
@@ -63,8 +63,35 @@ void Date::output()
 class Player
 {
   //using containership/aggregation
-  
+  char name[20];
+  int age;
+  Time training_time;
+  Date dob;
+  Date doj;
+
+public:
+  void get();
+  void put();
 };
+
+void Player::get()
+{
+  cin.ignore();
+  cout << "Enter name : "; cin.getline(name, 20);
+  cout << "Enter age : "; cin >> age;
+  cout << "Enter training time : "; training_time.input();
+  cout << "Enter DOB : "; dob.input();
+  cout << "Enter DOJ : "; doj.input();
+}
+
+void Player::put()
+{
+  cout << "Name : " << name << endl;
+  cout << "Age : " << age << endl;
+  cout << "Training time : "; training_time.output(); cout << endl;
+  cout << "DOB : "; dob.output(); cout << endl;
+  cout << "DOJ : "; doj.output(); cout << endl;
+}
 
 int main()
 {
