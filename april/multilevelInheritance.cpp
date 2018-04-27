@@ -12,7 +12,7 @@ public:
   void show();
 };
 
-class Student
+class Student : public Person
 {
   int rollno;
   float average;
@@ -22,7 +22,7 @@ public:
   void display();
 };
 
-class GradStudent
+class GradStudent : public Student
 {
   char subject[20];
   char working;
@@ -71,8 +71,8 @@ void GradStudent::enter()
   cout << "Enter subject : ";
   cin.getline(subject, 20);
 
-  cout << "Enter age : ";
-  cin >> age;
+  cout << "Enter working status : ";
+  cin >> working;
 }
 
 void GradStudent::displayDetails()
