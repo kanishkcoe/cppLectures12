@@ -40,13 +40,13 @@ class Date
 
 void Time::input()
 {
-  cout << "Enter time(hh:mm:ss) : ";
+  cout << "(hh:mm:ss) : ";
   cin >> hours >> minutes >> seconds;
 }
 
 void Date::input()
 {
-  cout << "Enter date(dd:mm:yy) : ";
+  cout << "(dd:mm:yy) : ";
   cin >> day >> month >> year;
 }
 
@@ -95,7 +95,10 @@ void Player::put()
 
 int main()
 {
-
+  Player player;
+  cout << "Class called ! " << endl;
+  player.get();
+  player.put();
 
   return 0;
 }
