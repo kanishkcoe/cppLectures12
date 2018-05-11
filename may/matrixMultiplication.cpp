@@ -21,7 +21,7 @@ void multiply(int a[10][10], int b[10][10], int c[10][10], int m, int n, int p, 
 
       for(int j = 0, i = 0; j < n && i < p; j++, i++)
       {
-        sum += a[x][j] + b[i][y];
+        sum += a[x][j] * b[i][y];
       }
 
       c[x][y] = sum;
