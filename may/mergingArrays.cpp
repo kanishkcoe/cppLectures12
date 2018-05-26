@@ -2,6 +2,16 @@
 
 using namespace std;
 
+void printArray(int *a, int size)
+{
+  for(int i = 0; i < size; i++)
+  {
+    cout << a[i] << ", ";
+  }
+
+  cout << "!!!" << endl;
+}
+
 void merge(int *a, int a_size, int *b, int b_size, int *c, int c_size)
 {
   int i;  //array a index
@@ -50,7 +60,19 @@ void merge(int *a, int a_size, int *b, int b_size, int *c, int c_size)
 
 int main()
 {
+  int a[] = {1, 3, 5, 9};
+  int b[] = {2, 4, 6, 7, 8, 9, 10};
+  int c[11];
 
+  int a_size = 4;
+  int b_size = 7;
+  int c_size = a_size + b_size;
+
+  merge(a, a_size, b, b_size, c, c_size);
+
+  printArray(a, a_size);
+  printArray(b, b_size);
+  printArray(c, c_size);
 
   return 0;
 }
