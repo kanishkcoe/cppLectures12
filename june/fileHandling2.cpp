@@ -7,14 +7,14 @@ int main()
 {
   char a[50];
   int count = 0;
-  // cout << "Enter any string : ";
-  // cin.getline(a, 50);
+  cout << "Enter any string : ";
+  cin.getline(a, 50);
 
   //inserted item to the file
-  // ofstream fout;
-  // fout.open("test2.txt", ios::app);
-  // fout << a;
-  // fout.close();
+  ofstream fout;
+  fout.open("test2.txt", ios::out);
+  fout << a;
+  fout.close();
 
   //getting item from the file
   ifstream fin;
@@ -24,9 +24,9 @@ int main()
   {
     fin.getline(a, 50);
     cout << a << endl;
-    count++;
+    // count++;
   }
   fin.close();
-  cout << count - 2 << endl;
+  // cout << count - 2 << endl;
   return 0;
 }

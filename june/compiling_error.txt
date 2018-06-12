@@ -1,0 +1,12 @@
+K:\WORK\cppLectures12\june\fileHandling3.cpp: In function 'int upperCount(char*)':
+K:\WORK\cppLectures12\june\fileHandling3.cpp:11:26: warning: NULL used in arithmetic [-Wpointer-arith]
+   for(int i = 0; s[i] != NULL; i++)
+                          ^
+K:\WORK\cppLectures12\june\fileHandling3.cpp: In function 'int lowerCount(char*)':
+K:\WORK\cppLectures12\june\fileHandling3.cpp:26:26: warning: NULL used in arithmetic [-Wpointer-arith]
+   for(int i = 0; s[i] != NULL; i++)
+                          ^
+K:\WORK\cppLectures12\june\fileHandling3.cpp: In function 'int main()':
+K:\WORK\cppLectures12\june\fileHandling3.cpp:44:37: error: 'nocreate' is not a member of 'std::ios {aka std::basic_ios<char>}'
+   fout.open("test3.txt", ios::out | ios::nocreate);
+                                     ^
