@@ -24,11 +24,9 @@ int countVowel(char *s)
       case 'U':count++;
       default : continue;
     }
-
-    return count;
   }
 
-
+  return count;
 }
 
 int main()
