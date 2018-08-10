@@ -2,18 +2,20 @@
 
 using namespace std;
 
+typedef struct Node * nodePointer;
+
 struct Node
 {
   int data;
-  struct Node *link;
+  nodePointer link;
 };
 
 //global variable
-struct Node *start = NULL;
+nodePointer start = NULL;
 
-struct Node * createNode(int x)
+nodePointer  createNode(int x)
 {
-  struct Node *temp;
+  nodePointer temp;
   temp = new struct Node;
 
   temp->data = x;
@@ -22,9 +24,9 @@ struct Node * createNode(int x)
   return temp;
 }
 
-void insert(int x)
+void insert_beginning(int x)
 {
-  struct Node *temp;
+  nodePointer temp;
   temp = createNode(x);
 
   if(start == NULL)
@@ -39,9 +41,33 @@ void insert(int x)
 
 }
 
+
+void insert_end(int x)
+{
+  nodePointer  temp;
+  temp = createNode(x);
+
+  if(start == NULL)
+  {
+    //list is empty
+    start = temp;
+    return;
+  }
+
+  nodePointer p; //traversal pointer
+  p = start;
+
+  while(p->link != NULL)
+  {
+    p = p->link;
+  }
+
+  p->link = temp;
+}
+
 void printList()
 {
-  struct Node *p; //traversal pointer
+  nodePointer p; //traversal pointer
 
   p = start;
 
@@ -65,7 +91,7 @@ int main()
     if(x == -1)
         break;
 
-    insert(x);
+    insert_end(x);
   }
 
   printList();
