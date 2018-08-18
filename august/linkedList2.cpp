@@ -65,6 +65,65 @@ void insert_end(int x)
   p->link = temp;
 }
 
+int deletion_beginning()
+{
+  if(start == NULL)
+  {
+    return -1;
+  }
+
+  nodePointer temp;
+  temp = start;
+  start = start->link;
+
+  int x = temp->data;
+
+  delete temp;
+
+  return x;
+}
+
+int deletion_end()
+{
+  if(start == NULL)
+  {
+    cout << "list is empty." << endl;
+    return -1;
+  }
+
+  nodePointer p;  //traversal nodePointer
+
+  p = start;
+
+  int x;
+
+  if(p->link == NULL)
+  {
+    //only one node
+    start = NULL;
+    x = p->data;
+    delete p;
+
+    return x;
+  }
+
+  while(p->link->link != NULL && p->link != NULL)
+  {
+    p = p->link;
+  }
+
+  nodePointer temp;
+
+  temp = p->link;
+  x = temp->data;
+
+  delete temp;
+
+  p->link = NULL;
+
+  return x;
+}
+
 void printList()
 {
   nodePointer p; //traversal pointer
@@ -93,6 +152,10 @@ int main()
 
     insert_end(x);
   }
+
+  printList();
+
+  cout << "deleted element = " << deletion_end() << endl;
 
   printList();
 
