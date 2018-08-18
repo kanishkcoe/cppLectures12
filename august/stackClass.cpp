@@ -40,6 +40,7 @@ public:
     cout << "Name : " << name << endl;
     cout << "--------------------------------" << endl;
   }
+
 };
 
 
@@ -63,6 +64,22 @@ class Stack
     void pop();
     Student peak();
     void printStack();
+
+    ~Stack()
+    {
+        cout << "Stack pointer deleted." << endl;
+        Node *temp;
+
+        while(top != NULL)
+        {
+          temp = top;
+          top = top->next;
+
+          delete temp;
+        }
+
+        delete top;
+    }
 };
 
 //member function definitions
