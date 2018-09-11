@@ -36,7 +36,7 @@ void ascendingSelectionSort(int a[], int size)
 
     for(int j = i + 1; j < size; j++)
     {
-      if(a[min] > a[j])
+      if(a[min] >= a[j])
       {
         min = j;
       }

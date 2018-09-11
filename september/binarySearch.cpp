@@ -46,7 +46,7 @@ int main()
   int a[] = {0, 1, 2, 3, 4, 7, 89, 456, 553, 2354, 10023};
   int size = sizeof(a) / sizeof(a[0]);
 
-  cout << endl << bsearch(a, size, 455) << endl;
+  cout << endl << bsearch(a, size, 456) << endl;
 
   return 0;
 }

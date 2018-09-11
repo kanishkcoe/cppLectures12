@@ -23,31 +23,31 @@ void swap(int &a, int &b)
 }
 
 
-void ascInsertionSort(int a[], int size)
+void ascBubbleSort(int a[], int size)
 {
-  for(int i = 1; i <= size; i++)
+  for(int pass = 1; pass < size; pass++)
   {
     printArray(a, 0, size);
-    for(int j = 0; j <= i; j++)
+    for(int j = 0; j < size - pass; j++)
     {
-      if(a[j] > a[i])
+      if(a[j] > a[j+1])
       {
-        swap(a[j], a[i]);
+        swap(a[j], a[j+1]);
       }
     }
   }
 }
 
-void descInsertionSort(int a[], int size)
+void descBubbleSort(int a[], int size)
 {
-  for(int i = 1; i <= size; i++)
+  for(int pass = 1; pass < size; pass++)
   {
     printArray(a, 0, size);
-    for(int j = 0; j <= i; j++)
+    for(int j = 0; j < size - pass; j++)
     {
-      if(a[j] < a[i])
+      if(a[j] < a[j+1])
       {
-        swap(a[j], a[i]);
+        swap(a[j], a[j+1]);
       }
     }
   }
@@ -56,9 +56,9 @@ void descInsertionSort(int a[], int size)
 int main()
 {
 
-  int a[] = {INT_MIN, 9, 8, 1, 0, 9, 1, 0, 4, 9, 2, 8, 1, 3, 0, 6, 9, 2, 8, 4, 3};
+  int a[] = {8, 1, 3, 0, 6, 9, 2};
   int size = sizeof(a) / sizeof(a[0]);
 
-  ascInsertionSort(a, size);
+  descBubbleSort(a, size);
   return 0;
 }
