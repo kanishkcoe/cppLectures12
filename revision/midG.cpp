@@ -32,6 +32,7 @@ int midg()
   {
     if(ismidg(word))
       count++;
+
   }
 
   //remainder section of code
