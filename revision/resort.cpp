@@ -122,7 +122,7 @@ void Resort::show()      //function to show details of each person
   cout<<"Price - Rs. "<<price<<endl;
 }
 
-void bookroom()      // function to book room in the resort
+void bookroom()     // function to book room in the resort
 {
   Resort resort;
 
