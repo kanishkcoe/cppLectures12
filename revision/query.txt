@@ -1,0 +1,5 @@
+INSERT INTO Employee( 1, "kanishk", 1200, "rohini", "delhi", "manager");
+INSERT INTO Employee( 2, "tushar", 1000, "rohini", "delhi", "student");
+INSERT INTO Employee( 3, "kunal", 1900, "rohini", "delhi", "assistant");
+INSERT INTO Employee( 4, "saksham", 1300, "dwarka", "delhi", "ceo");
+INSERT INTO Employee( 6, "mehul", 20, "jj colony", "haryana", "nalla");
